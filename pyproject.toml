@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+
+name = "dueforecast"
+version = "0.0.1"
+authors = [
+    { name = "Vitor Cerqueira", email = "cerqueira.vitormanuel@gmail.com" },
+]
+keywords = [
+    "Machine Learning",
+    "Data Science",
+    "Time Series",
+    "Forecasting",
+    "Responsible AI"
+]
+description = "Forecasting with Due Diligence"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "statsforecast==1.7.5",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/vcerqueira/dueforecast"
+"Bug Tracker" = "https://github.com/vcerqueira/dueforecast/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dueforecast"]
+
+[tool.pylint.design]
+max-attributes = 15
+max-args = 15
+max-locals = 20
+
+[tool.pylint.messages_control]
+disable = [
+    "missing-module-docstring",
+    "missing-class-docstring",
+    "missing-function-docstring",
+    "too-few-public-methods",
+]
